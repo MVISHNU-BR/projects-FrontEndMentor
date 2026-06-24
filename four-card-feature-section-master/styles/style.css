@@ -53,6 +53,7 @@
 }
 
 :root {
+  --background-color: #f8f8f8;
   --grey-500: #4d4f62;
   --grey-400: #6a7178;
   --white: #ffffff;
@@ -68,6 +69,10 @@
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-color: var(--background-color);
 }
 
 header {
@@ -172,6 +177,9 @@ header {
 
 @media (min-width: 999px) {
   .card-section {
+    max-width: 1114px;
+    margin: 0 auto;
+    padding: 0;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
