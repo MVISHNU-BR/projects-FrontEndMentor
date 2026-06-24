@@ -142,6 +142,8 @@ header {
 
 @media (min-width: 768px) {
   header {
+    margin-top: 80px;
+
     && .title {
       font-size: 32px;
       max-width: 540px;
@@ -176,6 +178,9 @@ header {
 }
 
 @media (min-width: 999px) {
+  header {
+    margin-top: 102px;
+  }
   .card-section {
     max-width: 1114px;
     margin: 0 auto;
