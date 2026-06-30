@@ -62,6 +62,7 @@ main {
   align-items: center;
   justify-self: center;
   background-color: #f6f5f6;
+  height: 100vh;
 }
 
 section {
