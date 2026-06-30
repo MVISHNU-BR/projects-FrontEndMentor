@@ -192,7 +192,7 @@ section {
   }
   .card1 {
     grid-area: card1;
-    background-image: url("/images/bg-pattern-quotation.svg");
+    background-image: url("../images/bg-pattern-quotation.svg");
     background-repeat: no-repeat;
     background-position: top right;
     background-position-x: 376px;
