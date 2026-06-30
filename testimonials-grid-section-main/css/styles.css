@@ -8,8 +8,9 @@
 
 /* Barlow Semi Condensed Semibold */
 .text-preset-1 {
-  font-family: "Barlow Semi Condensed";
+  font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 20px;
+  font-weight: 600;
   line-height: 120%;
   letter-spacing: 0px;
 }
@@ -17,6 +18,7 @@
 .text-preset-2 {
   font-family: "Barlow Semi Condensed";
   font-size: 13px;
+  font-weight: 500;
   line-height: 110%;
   letter-spacing: 0px;
 }
@@ -24,6 +26,7 @@
 .text-preset-3 {
   font-family: "Barlow Semi Condensed";
   font-size: 13px;
+  font-weight: 500;
   line-height: 140%;
   letter-spacing: 0px;
 }
@@ -31,6 +34,7 @@
 .text-preset-4 {
   font-family: "Barlow Semi Condensed";
   font-size: 11px;
+  font-weight: 500;
   line-height: 110%;
   letter-spacing: 0px;
 }
@@ -49,4 +53,179 @@
   --Grey-500: hsl(217, 19%, 35%);
   --Dark-blue: hsl(219, 29%, 14%);
   --Black: hsl(0, 0%, 7%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-self: center;
+  background-color: #f6f5f6;
+}
+
+section {
+  max-width: 1114px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5";
+  gap: 32px;
+  margin: 73px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 8px;
+  max-width: 305px;
+  box-shadow: 40px 60px 50px -47px rgb(72, 82, 106, 24.74%);
+}
+
+.card1 {
+  background-color: var(--Purple-500);
+}
+.card2 {
+  background-color: var(--Grey-500);
+}
+.card3 {
+  background-color: var(--White);
+}
+.card4 {
+  background-color: var(--Dark-blue);
+}
+.card5 {
+  background-color: var(--White);
+}
+
+.card5,
+.card3 > .card-person-info,
+.card5,
+.card3 > .testimonial-text {
+  & h2 {
+    color: var(--Grey-500);
+  }
+  & p {
+    color: var(--Grey-400);
+  }
+  & h3 {
+    color: var(--Grey-500);
+  }
+  & span {
+    color: var(--Grey-400);
+  }
+}
+
+.card4 > .card-person-info,
+.card4 > .testimonial-text {
+  & h2 {
+    color: var(--Grey-200);
+  }
+  & p {
+    color: var(--Grey-100);
+  }
+  & h3 {
+    color: var(--White);
+  }
+  & span {
+    color: var(--White);
+  }
+}
+
+.card-person-info {
+  display: flex;
+  gap: 16px;
+
+  & h3 {
+    color: var(--White);
+  }
+
+  & span {
+    color: var(--Purple-50);
+  }
+}
+
+.person-image {
+  height: 28px;
+  width: 28px;
+  border-radius: 100%;
+}
+
+.with-border {
+  height: 28px;
+  width: 28px;
+  border: 2px solid var(--Purple-300);
+}
+
+.testimonial-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & h2 {
+    color: var(--White);
+  }
+  & p {
+    color: var(--Purple-50);
+  }
+}
+
+@media (min-width: 500px) {
+  section {
+    margin: 80px 60px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "card1 card1"
+      "card2 card3"
+      "card4 card4"
+      "card5 card5";
+  }
+  .card {
+    max-width: 647px;
+  }
+  .card1 {
+    grid-area: card1;
+    background-image: url("/images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-position-x: 376px;
+  }
+  .card2 {
+    grid-area: card2;
+    max-width: 307px;
+  }
+  .card3 {
+    grid-area: card3;
+    max-width: 307px;
+  }
+  .card4 {
+    grid-area: card4;
+  }
+  .card5 {
+    grid-area: card5;
+  }
+}
+
+@media (min-width: 999px) {
+  section {
+    margin-top: 229px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card1 card1 card2 card5"
+      "card3 card4 card4 card5";
+  }
+  .card1 {
+    grid-area: card1;
+    max-width: 540px;
+  }
+  .card4 {
+    grid-area: card4;
+    max-width: 540px;
+  }
 }
