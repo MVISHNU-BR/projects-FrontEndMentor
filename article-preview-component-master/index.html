@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+
+    <link href="styles/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <article class="container">
+      <div class="card-image-container">
+        <img
+          class="article-image"
+          src="images/drawers.jpg"
+          alt="picture of a table with a vase with flowers"
+        />
+      </div>
+      <div class="content">
+        <div class="article-content">
+          <h1 class="textPresetBold1">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h1>
+          <p class="textPreset2">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+        </div>
+
+        <div class="avatar-container">
+          <div class="avatar-content">
+            <img
+              class="avatar-image"
+              src="images/avatar-michelle.jpg"
+              alt="Michelle Appleton Picture"
+            />
+            <div class="avatar-info">
+              <h3 class="textPresetBold2">Michelle Appleton</h3>
+              <span class="textPreset2"> 28 Jun 2020 </span>
+            </div>
+          </div>
+          <button class="share-link" aria-label="Share icon">
+            <svg
+              width="15"
+              height="13"
+              viewBox="0 0 15 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 6.48112L8.76629 0V3.86675H7.44095C3.33138 3.86675 0 7.02539 0 10.9219V12.971L0.588684 12.3594C2.59014 10.2802 5.4221 9.09549 8.39115 9.09549H8.76629V12.9622L15 6.48112Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+          <div class="share-container">
+            <span class="textPreset3">SHARE</span>
+
+            <div class="icon-share">
+              <a href="#" aria-label="Share on Facebook">
+                <img src="images/icon-facebook.svg" alt="Facebook icon" />
+              </a>
+              <a href="#" aria-label="Share on Twitter">
+                <img src="images/icon-twitter.svg" alt="Twitter icon" />
+              </a>
+              <a href="#" aria-label="Share on Pinterest">
+                <img src="images/icon-pinterest.svg" alt="Pinterest Icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>

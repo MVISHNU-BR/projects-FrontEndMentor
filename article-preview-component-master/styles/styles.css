@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+.attribution {
+  display: none;
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Manrope Bold */
+.textPresetBold1 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 0.25px;
+}
+
+/* Manrope Bold 2*/
+.textPresetBold2 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 140%;
+  letter-spacing: 0.12%;
+}
+/* Manrope Mediun */
+.textPreset2 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 140%;
+  letter-spacing: 0.12%;
+}
+
+/* Manrope*/
+.textPreset3 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 140%;
+  letter-spacing: 25%;
+}
+:root {
+  --Grey-200: #ecf2f8;
+  --Grey-400: #9daec2;
+  --Grey-500: #6e8098;
+  --Grey-900: #48556a;
+  --White: #ffffff;
+}
+
+body {
+  background-color: var(--Grey-200);
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--White);
+  max-width: 327px;
+  max-height: 538px;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 40px 40px -10px rgb(201, 213, 225, 0.5);
+}
+
+.article-image {
+  height: 200px;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: left -15px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 32px 30px 18px;
+  position: relative;
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  & h1 {
+    color: var(--Grey-900);
+  }
+  & p {
+    color: var(--Grey-500);
+  }
+}
+
+.avatar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar-content {
+  display: flex;
+  gap: 16px;
+}
+
+.avatar-info {
+  display: flex;
+  flex-direction: column;
+  & h3 {
+    color: var(--Grey-900);
+  }
+  & span {
+    color: var(--Grey-400);
+  }
+}
+
+.avatar-image {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+}
+
+.share-link {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  border: none;
+  background-color: var(--Grey-200);
+  color: var(--Grey-500);
+  cursor: pointer;
+}
+
+.share-link.active {
+  background-color: var(--Grey-500);
+  z-index: 1;
+  color: var(--White);
+}
+
+.share-container {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 30px;
+  width: 100%;
+  height: 76px;
+  background-color: var(--Grey-900);
+  color: var(--Grey-400);
+}
+
+.share-container.active {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 24px;
+}
+
+.icon-share {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+@media (min-width: 580px) {
+  .container {
+    max-width: 608px;
+    max-height: 346px;
+    width: 100%;
+    display: flex;
+    overflow: visible;
+  }
+
+  .card-image-container {
+    min-width: 229px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .article-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .content {
+    gap: 24px;
+    padding: 41px 36px 41px 32px;
+  }
+
+  .share-container {
+    width: 248px;
+    height: 55px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px var(--Grey-900);
+    bottom: 90px;
+    left: auto;
+    right: -67px;
+  }
+
+  .share-container::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: var(--Grey-900);
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+@media (min-width: 700px) {
+  .container {
+    max-width: 730px;
+    width: 100%;
+    max-height: 280px;
+    display: flex;
+  }
+  .card-image-container {
+    width: 100%;
+    min-height: 100%;
+  }
+
+  .article-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+  }
+
+  .content {
+    gap: 24px;
+    padding: 40px;
+  }
+  .share-container {
+    bottom: 75px;
+  }
+}
